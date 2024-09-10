@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="estiloform_proveedores.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <header class="headerformproveedores">
+    
+        <figure class="logo">
+            <img src="Imagenes/logo.png" alt="Logotipo">
+        </figure>
+
+        <ul class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="clientes.html">Clientes</a>            
+            <a href="proveedor.html">Proveedores</a>
+            <a href="#">Merchandising</a>
+            <button id="logout" class="btn btn-dark">Logout</button>
+        </ul>
+
+        <button class="btn">Contactenos</button>
+
+    </header>
+
+    <section class="bannerformproveedores">
+
+        <h1>Formulario Agregar Proveedores</h1>
+
+        <div class="form_agregarproveedores">
+
+            <form action="" onsubmit="" method="POST">
+
+                <div class="form_nombres">
+                    <label for="nombre" class="form_nombres">Nombre:</label>
+                    <br>
+                    <input type="text" class="form_nombres" name="nombres-p" id="nombres-p">                    
+                </div>
+                
+                <div class="form_nit">
+                    <label for="nit" class="form_nit">Nit:</label>
+                    <br>
+                    <input type="number" class="form_nit" name="nit-p" id="nit-p">                    
+                </div>
+
+                <div class="form_correo">
+                    <label for="correo" class="form_correo">Correo:</label>
+                    <br>
+                    <input type="text" class="form_correo" name="correo-p" id="correo-p">                    
+                </div>
+
+                <div class="form_telefono">
+                    <label for="telefono" class="form_telefono">Teléfono:</label>
+                    <br>
+                    <input type="number" class="form_telefono" name="telefono-p" id="telefono-p">                    
+                </div>
+
+                <div class="form_direccion">
+                    <label for="direccion" class="form_direccion">Dirección:</label>
+                    <br>
+                    <input type="text" class="form_direccion" name="direccion-p" id="direccion-p">                    
+                </div>
+
+            </form>            
+
+        </div>         
+
+        <div class="btn_form_agregarproveedores">
+
+            <button type="button" class="btn_agregaproveedores" onclick="guardarProveedores()">Guardar Proveedor</button>
+            <button type="button" class="btn_modificarproveedor" id = "btn-editar">Modificar Proveedor</button>          
+
+        </div>
+        
+       
+
+    </section>
+
+    <footer>
+
+        <div class="line">
+
+        </div>
+
+        <p class="footer-contactenos">Contactenos en nuestras redes sociales</p>
+
+        <div class="social-media">
+
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+
+        </div>
+
+
+    </footer>
+
+    <script src="js/request.js"></script>
+    <script src="js/proveedor.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        window.onload = function () {
+            let boton = document.getElementById("btn-editar");
+            const url = new URLSearchParams(window.location.search);
+            cargarDatos(url.get("id"));
+            boton.onclick=()=>{
+                modificarProveedores(url.get("id"));
+            }
+
+        }
+    </script>
+
+
+
+
+    
+</body>
+</html>

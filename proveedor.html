@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="estiloproveedores.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <header class="headerproveedores">
+    
+        <figure class="logo">
+            <img src="Imagenes/logo.png" alt="Logotipo">
+        </figure>
+
+        <ul class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="clientes.html">Clientes</a>            
+            <a href="proveedor.html">Proveedores</a>
+            <a href="#">Merchandising</a>
+            <button id="logout" class="btn btn-dark">Logout</button>
+        </ul>
+
+        <button class="btn">Contactenos</button>
+
+    </header>
+
+    <section class="bannerproveedores">
+
+        <h1>Listado de Proveedores</h1>
+
+        <table class="table">
+            <thead>
+              <tr class="table-primary">
+                
+                <th scope="col">Nombre</th>
+                <th scope="col">Nit</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="proveedores-table">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="agregarproveedores">
+
+            <h2>Modulo de Proveedores</h2>
+
+            <button class="btnmoduloproveedores" onclick="window.location='form_proveedor.html'">Agregar Proveedor</button>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+      <div class="line">
+
+      </div>
+
+      <p class="footer-contactenos">Contactenos en nuestras redes sociales</p>
+
+      <div class="social-media">
+
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-instagram"></a>
+
+      </div>
+
+
+  </footer>
+
+    <script src="js/request.js"></script>
+    <script src="js/proveedor.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+      window.onload = function () {
+          mostrarDatos();
+      }
+  </script>
+    
+</body>
+</html>
